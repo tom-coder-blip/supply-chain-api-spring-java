@@ -30,7 +30,7 @@ The system streamlines supply chain operations with layered security, scalable a
 ---
 
 ## ⚙️ Tech Stack
-- Java 17  
+- Java 21  
 - Spring Boot  
 - Spring Security  
 - PostgreSQL + Flyway  
