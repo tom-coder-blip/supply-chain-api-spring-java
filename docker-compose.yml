@@ -1,0 +1,28 @@
+services:
+  db:
+    image: postgres:17
+    container_name: logistics_db
+    environment:
+      POSTGRES_DB: logistics_hub
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: TopStriker15
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  app:
+    build: .
+    container_name: logistics_app
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/logistics_hub
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: TopStriker15
+      JWT_SECRET: uX9vZ3pLrTq1wE7mBfY2hN5cJk8sQ4vTzX6aG9bLrPq3dV1nMfY7eK2tWzR5xU8qJ
+
+volumes:
+  pgdata:

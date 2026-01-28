@@ -31,19 +31,19 @@ public class SecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity http, JwtUtil jwtUtil) throws Exception {
 
         http
-                // 🔥 REQUIRED for JWT apps
+                // REQUIRED for JWT apps
                 .csrf(AbstractHttpConfigurer::disable)
                 .httpBasic(AbstractHttpConfigurer::disable)
                 .formLogin(AbstractHttpConfigurer::disable)
                 .logout(AbstractHttpConfigurer::disable)
 
-                // 🔥 Stateless API
+                // Stateless API
                 .sessionManagement(session ->
                         session.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 )
 
                 .authorizeHttpRequests(auth -> auth
-                        // ✅ Public
+                        // Public
                         .requestMatchers(
                                 "/",
                                 "/error",
@@ -57,7 +57,7 @@ public class SecurityConfig {
                                 "/webjars/**"
                         ).permitAll()
 
-                        // 🔐 Secured
+                        // Secured
                         .requestMatchers("/admin/**").hasRole("ADMIN")
                         .requestMatchers("/suppliers/**").hasAnyRole("SUPPLIER", "ADMIN")
                         .requestMatchers("/warehouses/**").hasAnyRole("WAREHOUSE_MANAGER", "ADMIN")

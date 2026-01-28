@@ -3,10 +3,11 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/logistics_hub
-    username: postgres
-    password: TopStriker15
+    url: ${SPRING_DATASOURCE_URL}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
     driver-class-name: org.postgresql.Driver
+
 
   jpa:
     hibernate:
@@ -29,8 +30,8 @@ springdoc:
     path: /swagger-ui.html
 
 jwt:
-  secret: "uX9vZ3pLrTq1wE7mBfY2hN5cJk8sQ4vTzX6aG9bLrPq3dV1nMfY7eK2tWzR5xU8qJ"   # replace with strong secret in env vars
-  expiration: 3600000                # 1 hour in milliseconds
+  secret: ${JWT_SECRET}
+  expiration: 3600000           # 1 hour in milliseconds
 
 management:
   endpoints:

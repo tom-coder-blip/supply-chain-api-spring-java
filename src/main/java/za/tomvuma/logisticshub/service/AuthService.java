@@ -44,7 +44,7 @@ public class AuthService {
         }
 
         var user = new User();
-        user.setUsername(req.username()); // ✅ NEW
+        user.setUsername(req.username());
         user.setEmail(req.email());
         user.setPasswordHash(encoder.encode(req.password()));
 
@@ -58,6 +58,11 @@ public class AuthService {
                 .collect(Collectors.toSet());
 
         user.setRoles(validRoles);
+
+        // Set primary role (first role in the set)
+        if (!validRoles.isEmpty()) {
+            user.setPrimaryRole(validRoles.iterator().next().getName());
+        }
 
         var saved = users.save(user);
 
@@ -75,8 +80,10 @@ public class AuthService {
                 saved.getEmail(),
                 saved.getRoles().stream().map(Role::getName).collect(Collectors.toSet()),
                 saved.getStatus()
+                // If you want to expose primaryRole separately, add it here too
         );
     }
+
 
 
     public LoginResponse login(LoginRequest req) {
