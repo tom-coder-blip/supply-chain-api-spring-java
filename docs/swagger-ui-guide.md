@@ -52,7 +52,7 @@ Open the deployed Swagger UI here:
 - Use different role credentials to see RBAC in action.
 - Check response codes to confirm permissions are enforced.
 
-- ## 📂 Controller Reference
+📂 Controller Reference
 
 warehouse-order-controller  
 Handles supplier orders delivered to warehouses (e.g., stock receipts).
