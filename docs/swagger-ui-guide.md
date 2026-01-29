@@ -50,4 +50,43 @@ Open the deployed Swagger UI here:
 ## ✅ Tips
 - Always authenticate before testing endpoints.
 - Use different role credentials to see RBAC in action.
-- Check response codes to confirm permissions are enforced.  
+- Check response codes to confirm permissions are enforced.
+
+- ## 📂 Controller Reference
+
+warehouse-order-controller  
+Handles supplier orders delivered to warehouses (e.g., stock receipts).
+
+warehouse-customer-order-controller  
+Manages customer orders from the warehouse side — accept, reject, fulfill.
+
+supplier-controller  
+Manages supplier profiles and their product catalogs.
+
+supplier-order-controller  
+Handles purchase orders initiated by suppliers to restock inventory.
+
+customer-order-controller  
+Allows customers to place, view, and cancel orders.
+
+admin-controller  
+Oversees user registration, role assignment, and system-wide auditing.
+
+warehouse-controller  
+Manages warehouse entities — locations, capacity, and metadata.
+
+stock-receipt-controller  
+Records incoming stock deliveries from suppliers to warehouses.
+
+stock-controller  
+Tracks and updates stock levels across warehouses.
+
+auth-controller  
+Manages login, JWT token generation, and role-based authentication.
+
+inventory-controller  
+Provides inventory visibility and operations for warehouse managers.
+
+customer-product-controller  
+Lets customers browse available products and view details.
+
