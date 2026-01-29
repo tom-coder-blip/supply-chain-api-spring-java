@@ -42,7 +42,7 @@ The system streamlines supply chain operations with layered security, scalable a
 ## 🚀 Live Demo & Resources
 - [Explore Project](https://supply-chain-api-4sgg.onrender.com/swagger-ui.html)  
 - [View GitHub Code](https://github.com/tom-coder-blip/supply-chain-api-spring-java)  
-- [Watch Demo](https://www.youtube.com/watch?v=sIWNv6AlTAw&list=PLJy1J9ZBWnpMMuJnHmKQS_8RqHl5LS5VU&pp=gAQB)  
+- [Watch Demo] 1 minnute Project Overview (https://www.youtube.com/watch?v=8nAkl4_LQsw&list=PLJy1J9ZBWnpP4tDtU1eTSe7bcHctrtXC4&pp=gAQBsAgC)   
 - [Project Documentation](docs/project-overview.md)  
 - [Swagger Testing Guide](docs/swagger-guide.md)  
 
