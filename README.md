@@ -51,7 +51,7 @@ The system streamlines supply chain operations with layered security, scalable a
 ## 🧰 Getting Started
 
 ### Prerequisites
-- Java 17  
+- Java 21 
 - Docker  
 - PostgreSQL  
 
